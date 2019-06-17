@@ -1,2 +1,2 @@
 #!/bin/bash
-awk 'BEGIN{p=NUM * 1.00; printf "%0.2f\n", p}'
+printf "%0.2f\n" $NUM
