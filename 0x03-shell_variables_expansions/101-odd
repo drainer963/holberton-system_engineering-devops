@@ -1,2 +1,2 @@
 #!/bin/bash
-awk getline
+grep "^[0-9]*[13579]"
