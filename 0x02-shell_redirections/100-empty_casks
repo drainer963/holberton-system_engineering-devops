@@ -1,2 +1,2 @@
-#!/in/bash
+#!/bin/bash
 find -type f -empty | cut -d/ -f1
