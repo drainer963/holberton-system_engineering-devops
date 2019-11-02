@@ -6,7 +6,7 @@ do
     echo Holberton School
     if (( counter == 9))
     then
-        echo hi
+        echo Hi
     fi
     ((counter++))
 done
