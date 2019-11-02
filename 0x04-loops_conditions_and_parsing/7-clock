@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+counter=0
+count=1
+while [ $counter -le 12 ]
+do
+    count=1
+    echo Hour: $counter
+    ((counter++))
+    while [ $count -le 59 ]
+    do
+	echo $count
+	((count++))
+    done
+done
