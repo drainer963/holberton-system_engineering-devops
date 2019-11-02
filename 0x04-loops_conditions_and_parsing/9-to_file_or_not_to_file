@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+# give status info on file
 if [ -e holbertonschool ]
 then
     echo holbertonschool file exists

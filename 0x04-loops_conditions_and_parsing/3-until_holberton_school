@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# print holberton 10 times      
 counter=1
 until [ $counter -gt 10 ]
 do

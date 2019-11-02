@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+# count hours and min in half day
 counter=0
 count=1
 while [ $counter -le 12 ]

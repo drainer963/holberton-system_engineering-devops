@@ -1,5 +1,5 @@
 #!/usr/bin/env bash                                                                        
-
+# bad luck good luck
 counter=0
 while [ $counter -le 19 ]
 do

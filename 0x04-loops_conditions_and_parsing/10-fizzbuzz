@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+# fizz buzz bash script
 for i in {1..100}
 do
     if ((i % 15 == 0))

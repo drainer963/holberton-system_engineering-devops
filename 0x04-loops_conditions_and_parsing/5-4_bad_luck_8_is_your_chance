@@ -1,5 +1,5 @@
 #!/usr/bin/env bash                                                                        
-
+# another printing func
 counter=1
 while [ $counter -le 10 ]
 do

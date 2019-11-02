@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+# print names of files in dir except the leading nums and '-'
 for f in *;
 do
     echo "$f" | cut -d '-' -f2-
