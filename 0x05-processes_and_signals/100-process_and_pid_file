@@ -1,15 +1,12 @@
 #!/usr/bin/env bash
 # create file and respond to certin signals
-
 _file=/var/run/holbertonscript.pid
 touch _file 
-pgrep _file >> _file
-
+pgrep _file > _file
 while :
 do
 	echo 'To infinity and beyond'
-	sleep 1
 	trap 'echo "Y U no love me?!"' SIGINT
 	trap 'echo "I hate the kill command"; rm -rf $file; exit' SIGTERM
-     	trap "rm -rf $file; exit; " SIGQUIT
+     	trap 'rm -rf $file; exit; ' SIGQUIT
 done
