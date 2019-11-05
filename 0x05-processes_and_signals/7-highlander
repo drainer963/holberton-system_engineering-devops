@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#infinite print with sleep and sigterm notif
+#infinite print with sleep and sigterm trapping
 
 while :
 do
