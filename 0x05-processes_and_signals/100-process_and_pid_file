@@ -1,13 +1,13 @@
-#!/usr/bin/env bash
-# create file and respond to certin signals
+#!/usr/bin/env bash                                                             
+# create file and respond to certin signals                                     
 _file=/var/run/holbertonscript.pid
-touch _file 
-echo "$$" > _file
+touch $_file
+echo "$$" > $_file
 while :
 do
-	echo 'To infinity and beyond'
-	trap 'echo "Y U no love me?!"' SIGINT
-	trap 'echo "I hate the kill command"; rm -rf $file; exit' SIGTERM
-     	trap 'rm -rf $file; exit; ' SIGQUIT
-	sleep 1
+        echo 'To infinity and beyond'
+        trap 'echo "Y U no love me?!"' SIGINT
+        trap 'echo "I hate the kill command"; rm -rf $_file; exit' SIGTERM
+        trap 'rm -rf $_file; exit; ' SIGQUIT
+        sleep 1
 done
