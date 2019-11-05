@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#kill without kill
+
+pkill $"(pgrep "4-to_infinity_and_beyond")"
