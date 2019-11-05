@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# script to display all processes
+
+echo ps aux | less
