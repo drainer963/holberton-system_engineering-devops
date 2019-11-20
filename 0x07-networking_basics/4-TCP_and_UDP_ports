@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-netstat --listen
+#display current listening sockets and prog names
+netstat --listen -p
