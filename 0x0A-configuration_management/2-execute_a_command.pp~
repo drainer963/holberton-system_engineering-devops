@@ -1,0 +1,5 @@
+exec { 'pkill':
+     command => 'pkill',
+     path => '.',
+     provider => shell,
+     }
