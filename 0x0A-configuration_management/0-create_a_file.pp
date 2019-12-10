@@ -1,3 +1,5 @@
+# create file with puppet
+
 file { '0-create_a_file.pp':
      path => '/tmp/holberton',
      mode => "0744",
