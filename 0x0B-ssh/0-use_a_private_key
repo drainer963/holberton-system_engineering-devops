@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+# connect to server via ssh and priviate key
 ssh -i ~/.ssh/holberton ubuntu@35.243.241.27
