@@ -5,3 +5,4 @@ exec { 'killmenow':
   path     => '/usr/bin',
   provider => shell,
 }
+
