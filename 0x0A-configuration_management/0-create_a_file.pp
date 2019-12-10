@@ -1,9 +1,9 @@
 # create file with puppet
 
 file { '0-create_a_file.pp':
-     path => '/tmp/holberton',
-     mode => "0744",
-     owner => 'www-data',
-     group => 'www-data',
-     content => 'I love Puppet',
-     }
+  path    => '/tmp/holberton',
+  mode    => '0744',
+  owner   => 'www-data',
+  group   => 'www-data',
+  content => 'I love Puppet',
+}
