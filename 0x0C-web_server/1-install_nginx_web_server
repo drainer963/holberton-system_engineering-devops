@@ -1,4 +1,5 @@
 #!/usr/bin/env/ bash
+# configure server
 server {
        listen 80;
        return "Holberton School";
