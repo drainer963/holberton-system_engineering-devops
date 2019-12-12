@@ -1,7 +1,11 @@
 #!/usr/bin/env/ bash
 # configure server
-sudo apt-get update
-sudo apt-get install nginx
+sudo apt-get update && sudo apt upgrade -y
+sudo apt install build-essential -y
+sudo apt install libmaxminddb0 libmaxminddb-dev mmdb-bin -y
+sudo apt install checkinstall -y
+sudo apt install ufw -y
+sudo apt-get install nginx -y
 server {
        listen 80;
        return "Holberton School";
