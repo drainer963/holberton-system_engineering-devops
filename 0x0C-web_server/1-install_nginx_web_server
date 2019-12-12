@@ -2,8 +2,6 @@
 # configure server
 apt-get update -y
 apt-get install nginx -y
-apt install ufw -y
-mkdir -p /var/www//html
 ufw allow 'Nginx HTTP'
 echo "Holberton School" > /var/www/html/index.html
 service nginx start
