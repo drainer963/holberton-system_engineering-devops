@@ -1,5 +1,7 @@
 #!/usr/bin/env/ bash
 # configure server
+sudo apt-get update
+sudo apt-get install nginx
 server {
        listen 80;
        return "Holberton School";
