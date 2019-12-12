@@ -1,9 +1,6 @@
-#!/usr/bin/env/ bash
+#!/usr/bin/env bash
 # configure server
-apt-get update && sudo apt upgrade -y
-apt install build-essential -y
-apt install libmaxminddb0 libmaxminddb-dev mmdb-bin -y
-apt install checkinstall -y
+apt-get update -y
 apt install ufw -y
 mkdir -p /var/www//html
 ufw allow 'Nginx HTTP'
