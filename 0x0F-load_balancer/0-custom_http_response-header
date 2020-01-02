@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#Configure Nginx so that its HTTP response contains a custom header
+#!/usr/bin/env bash
+apt-get update -y
+apt-get install nginx -y
+ufw allow 'Nginx HTTP'
+echo "Holberton School" > /var/www/html/index.html
+touch /etc/nginx/sites-available/server.headers
+echo "server {add_header X-Served-By $HOST}" > /etc/nginx/sites-available/server.headers
+service nginx restart
