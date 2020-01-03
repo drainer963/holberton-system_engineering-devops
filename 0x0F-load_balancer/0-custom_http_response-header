@@ -5,5 +5,5 @@ apt-get -y install nginx
 ufw allow 'Nginx HTTP'
 echo "Holberton School" > /var/www/html/index.html
 touch /etc/nginx/sites-available/server.headers
-echo "server {add_header X-Served-By $HOST}" > /etc/nginx/sites-available/server.headers
+echo "server {add_header X-Served-By $HOST}" >> /etc/nginx/sites-available/server.headers
 service nginx restart
