@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# configures a server
+#fix broken container
 sed -i 's/8080/80/g' /etc/nginx/sites-available/default
 service nginx restart
-
