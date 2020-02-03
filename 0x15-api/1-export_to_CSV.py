@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """given an employee ID, create a csv file with all tasks assigned to them"""
+import csv
+import json
 import requests
 import sys
-import json
-import csv
 
 count = 0
 ccount = 0

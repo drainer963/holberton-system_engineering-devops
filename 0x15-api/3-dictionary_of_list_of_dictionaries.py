@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """return information about all employees TODO list progress
 as a dictionary of lists of dictionarires"""
+import json
 import requests
 import sys
-import json
 
 
 newdict = {}

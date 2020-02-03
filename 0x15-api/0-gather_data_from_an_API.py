@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """given an employee ID, return information about his/her TODO list progress"""
+import json
 import requests
 import sys
-import json
 
 count = 0
 ccount = 0
