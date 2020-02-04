@@ -14,7 +14,7 @@ if __name__ == "__main__":
     reqdata = req.json()
     todo = requests.get('https://jsonplaceholder.typicode.com/todos')
     tododata = todo.json()
-    username = reqdata.get('name')
+    username = reqdata.get('username')
 
     for task in tododata:
         if task.get('userId') == int(user_id):
@@ -27,4 +27,4 @@ if __name__ == "__main__":
     mydict = {user_id: ul}
 
     with open(str(user_id) + '.json', 'w') as fp:
-        dump = json.dump(mydict, fp)
+        json.dump(mydict, fp)
