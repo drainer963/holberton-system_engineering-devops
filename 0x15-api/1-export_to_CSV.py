@@ -21,7 +21,7 @@ if __name__ == "__main__":
         if task.get('userId') == int(user_id):
             ul.append(task)
 
-    with open('USER_ID.csv', 'w') as data_file:
+    with open(str(USER_ID) + '.csv', 'w') as data_file:
         csv_writer = csv.writer(data_file, quoting=csv.QUOTE_ALL)
 
         for tasks in ul:
