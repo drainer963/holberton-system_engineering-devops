@@ -12,7 +12,8 @@ if __name__ == "__main__":
     req = requests.get(
         "{}{}".format('https://jsonplaceholder.typicode.com/users/', user_id))
     reqdata = req.json()
-    username = reqdata.get('name')
+    USER_ID = reqdata.get('id')
+    USERNAME = reqdata.get('name')
     todo = requests.get('https://jsonplaceholder.typicode.com/todos')
     tododata = todo.json()
 
@@ -24,6 +25,7 @@ if __name__ == "__main__":
         csv_writer = csv.writer(data_file, quoting=csv.QUOTE_ALL)
 
         for tasks in ul:
+            TASK_TITLE = tasks.get('title')
+            TASK_COMPLETED_STATUS = tasks.get('completed',  False)
             csv_writer.writerow(
-                [tasks.get('userId'), username, tasks.get('completed'),
-                 tasks.get('title')])
+                [USER_ID, USERNAME, TASK_COMPLETED_STATUS, TASK_TITLE])
