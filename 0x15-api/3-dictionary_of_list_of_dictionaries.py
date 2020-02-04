@@ -9,7 +9,10 @@ if __name__ == "__main__":
 
     newdict = {}
     user_id = 1
-    for user in range(0, 9):
+    users = requests.get('https://jsonplaceholder.typicode.com/users/')
+    users = users.json()
+
+    for user in users:
         ul = []
         req = requests.get(
             "{}{}".format(
