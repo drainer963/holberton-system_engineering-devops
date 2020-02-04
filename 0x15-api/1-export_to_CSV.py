@@ -26,7 +26,7 @@ if __name__ == "__main__":
             csv_writer.writerow(
                 [
                     task.get('userId'),
-                    reqdata.get('name'),
+                    reqdata.get('username'),
                     task.get('completed'),
                     task.get('title')
                 ])
