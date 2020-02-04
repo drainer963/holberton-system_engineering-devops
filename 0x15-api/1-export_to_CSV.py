@@ -7,12 +7,8 @@ if __name__ == "__main__":
     import requests
     import sys
 
-    count = 0
-    ccount = 0
     ul = []
-    cl = []
     user_id = sys.argv[1]
-
     req = requests.get(
         "{}{}".format('https://jsonplaceholder.typicode.com/users/', user_id))
     reqdata = req.json()
@@ -22,7 +18,6 @@ if __name__ == "__main__":
 
     for task in tododata:
         if task.get('userId') == int(user_id):
-            count += 1
             ul.append(task)
 
     with open('USER_ID.csv', 'w') as data_file:
