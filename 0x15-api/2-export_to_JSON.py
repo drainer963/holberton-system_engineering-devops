@@ -18,12 +18,13 @@ if __name__ == "__main__":
 
     for task in tododata:
         if task.get('userId') == int(user_id):
-            keys_to_exclude = set(('userId', 'id'))
-            task = {k: v for k, v in task.items() if k not in keys_to_exclude}
-            task.update({"username": username})
-            ul.append(task)
+            updatedtask = {}
+            updatedtask.update({"task": task.get('title')})
+            updatedtask.update({"completed": task.get('completed')})
+            updatedtask.update({"username": username})
+            ul.append(updatedtask)
 
     mydict = {user_id: ul}
 
-    with open('USER_ID.json', 'w') as fp:
+    with open(str(user_id) + '.json', 'w') as fp:
         dump = json.dump(mydict, fp)
