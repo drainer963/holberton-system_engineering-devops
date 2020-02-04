@@ -23,7 +23,7 @@ if __name__ == "__main__":
             task.update({"username": username})
             ul.append(task)
 
-    mydict = {name: ul}
+    mydict = {user_id: ul}
 
     with open('USER_ID.json', 'w') as fp:
         dump = json.dump(mydict, fp)
