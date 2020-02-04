@@ -17,7 +17,7 @@ if __name__ == "__main__":
         reqdata = req.json()
         todo = requests.get('https://jsonplaceholder.typicode.com/todos')
         tododata = todo.json()
-        username = reqdata.get('name')
+        username = reqdata.get('username')
 
         for task in tododata:
             if task.get('userId') == int(user_id):
