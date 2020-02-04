@@ -5,18 +5,18 @@ import requests
 import sys
 
 ul = []
-name = sys.argv[1]
+user_id = sys.argv[1]
 
 req = requests.get(
-    "{}{}".format('https://jsonplaceholder.typicode.com/users/', name))
+    "{}{}".format('https://jsonplaceholder.typicode.com/users/', user_id))
 reqdata = req.json()
 todo = requests.get('https://jsonplaceholder.typicode.com/todos')
 tododata = todo.json()
-username = reqdata['name']
+username = reqdata.get('name')
 
 for task in tododata:
-    if task['userId'] == int(name):
-        keys_to_exclude = set(('userId', 'id', 'updated_at'))
+    if task.get('userId') == int(user_id):
+        keys_to_exclude = set(('userId', 'id'))
         task = {k: v for k, v in task.items() if k not in keys_to_exclude}
         task.update({"username": username})
         ul.append(task)

@@ -7,24 +7,24 @@ import sys
 
 
 newdict = {}
-name = 1
+user_id = 1
 for user in range(0, 9):
     ul = []
     req = requests.get(
-        "{}{}".format('https://jsonplaceholder.typicode.com/users/', name))
+        "{}{}".format('https://jsonplaceholder.typicode.com/users/', user_id))
     reqdata = req.json()
     todo = requests.get('https://jsonplaceholder.typicode.com/todos')
     tododata = todo.json()
-    username = reqdata['name']
+    username = reqdata.get('name')
 
     for task in tododata:
-        if task['userId'] == int(name):
+        if task.get('userId') == int(user_id):
             updatedtask = {}
             updatedtask.update({"username": username})
-            updatedtask.update({"task": task['title']})
-            updatedtask.update({"completed": task['completed']})
+            updatedtask.update({"task": task.get('title')})
+            updatedtask.update({"completed": task.get('completed')})
             ul.append(updatedtask)
-    mydict = {str(name): ul}
+    mydict = {str(user_id): ul}
     newdict.update(mydict)
     name += 1
 

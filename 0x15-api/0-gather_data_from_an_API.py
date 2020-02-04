@@ -17,17 +17,17 @@ todo = requests.get('https://jsonplaceholder.typicode.com/todos')
 tododata = todo.json()
 
 for task in tododata:
-    if task['userId'] == int(name):
+    if task.get('userId') == int(name):
         count += 1
         ul.append(task)
 
 for task in ul:
-    if task['completed'] is True:
+    if task.get('completed') is True:
         ccount += 1
         cl.append(task)
 
 print("{} {} {}({}/{}):".format(
-    "Employee", reqdata['name'], "is done with tasks", ccount, count))
+    "Employee", reqdata.get('name'), "is done with tasks", ccount, count))
 
 for tasks in cl:
     print("{} {}".format('\t', tasks['title']))
